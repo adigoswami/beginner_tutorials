@@ -1,10 +1,3 @@
-
-Create the src/listener.cpp file within the beginner_tutorials package and paste the following inside it:
-
-
-https://raw.github.com/ros/ros_tutorials/kinetic-devel/roscpp_tutorials/listener/listener.cpp
-
-Toggle line numbers
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 
