@@ -73,16 +73,17 @@ int main(int argc, char **argv) {
 
   std::string message;
 
-  n.getParam("message",message);
+  n.getParam("Welcome", message);
   std::cout << "\n" << message;
-  std::cout << "?\n\n.... Really? That's all you have to say ? \n\n Whatever. \n\n";
+  std::cout <<
+  "!\n\n.... Into the matrix!\n\n My world. \n\n";
 
-  while(ros::ok()) {
-    
-    ros::ServiceClient client = n.serviceClient<beginner_tutorials::chatting_service>("Chatter");
+  while (ros::ok()) {
+    ros::ServiceClient client
+    = n.serviceClient<beginner_tutorials::chatting_service>("Chatter");
 
     beginner_tutorials::chatting_service srv;
-    std::cout << "Do you think robots are awesome ? (y/n): ";
+    std::cout << "Do you think you are real ? (y/n): ";
     std::cin >> srv.request.request_message;
 
     if (client.call(srv)) {
@@ -97,7 +98,7 @@ int main(int argc, char **argv) {
     }
 
     if (srv.request.request_message == "n") {
-      ROS_FATAL_STREAM("User unable to realize the superiority of robots");
+      ROS_FATAL_STREAM("Then who am I talking to, huh?");
       ros::shutdown();
     }
   }

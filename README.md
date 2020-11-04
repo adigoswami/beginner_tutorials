@@ -47,12 +47,13 @@ Terminal 2:
 ```
 cd catkin_ws
 source devel/setup.bash
-rosrun beginner_tutorials talker
+roslaunch beginner_tutorials conversation.launch my_message:="Message"
+Answer 'yes' with y and 'no' with 'n'
 ```
 
 Terminal 3:
 ```
 cd catkin_ws
 source devel/setup.bash
-rosrun beginner_tutorials listener
+rosservice call /chatter "request_message: 'enter your response here'"
 ```
