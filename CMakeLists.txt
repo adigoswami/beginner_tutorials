@@ -13,7 +13,7 @@ add_message_files(
 
 add_service_files(
   FILES
-  AddTwoInts.srv
+  chatting_service.srv
 )
 
 generate_messages(
