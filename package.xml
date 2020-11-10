@@ -1,16 +1,20 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>beginner_tutorials</name>
-  <version>0.0.0</version>
+  <version>0.1.0</version>
   <description>The beginner_tutorials ROS package</description>
   <maintainer email="goswami@umd.edu">Aditya Goswami</maintainer>
 
   <license>BSD</license>
+
+  <author email = "goswami@umd.edu">Aditya Goswami</author>
+
   <url type="website">http://wiki.ros.org/beginner_tutorials/tutorials</url>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>rospy</build_depend>
   <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>rospy</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
